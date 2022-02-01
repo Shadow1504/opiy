@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login</h1>
+   <form onsubmit="return frm()">
+<label>UserName:</label>
+<input type="text" name="nme" id="nme" >
+<span id="error"></span>
+<br>
+<label>password</label>
+<input type="password" name="pass" id="pass" ><br>
+<input type="submit">
+   </form>
+<script>
+    function frm()
+    {
+        let inp=document.getElementById("nme");
+        let inppass=document.getElementById("pass");
+        let uname=document.getElementById("nme").value;
+        let pass=document.getElementById("pass").value;
+        let unameerr=document.getElementById("error");
+        if(uname=="prashant" && pass==123 )
+        {
+            window.open("https://www.webdschool.com/");
+        }
+        if(uname=="")
+        {
+            unameerr.innerHTML="enter the name";
+            unameerr.style.color="red";
+            inp.style.borderColor="red";
+            
+            return false;
+        }
+      
+      
+        
+    }
+</script>
+</body>
+</html>
